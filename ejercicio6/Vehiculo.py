@@ -7,7 +7,7 @@ class Vehiculo:
         self.ruedas = ruedas
         self.puertas = puertas
     def __str__(self):
-        return "color {},{} ruedas, {} puertas ".format(self.color, self.ruedas, self.puertas)
+        return "color {}, {} ruedas, {} puertas ".format(self.color, self.ruedas, self.puertas)
 
     
 class Coche(Vehiculo):
@@ -18,11 +18,11 @@ class Coche(Vehiculo):
         self.velocidad = velocidad
         self.cilindrada = cilindrada
     def __str__(self):
-        return "color {}, {} ruedas, {} puertas, velocidad {} km/hr, cilindrada {} cc".format(self.color, self.ruedas, self.puertas, self.velocidad, self.cilindrada)
+        return super().__str__()+", velocidad {} km/hr, cilindrada {} cc".format(self.velocidad, self.cilindrada)
 
 #c = Coche('blanco', 10, 10, 100)
 c = Coche('blanco', 4, 5, 100, 300)
 print(c)
 print("------------------------------")
 print("color =",c.color, "\nruedas = ", c.ruedas, "\npuertas = ", 
-      c.puertas, "\nvelocidad = ", c.velocidad, "\ncilindrada = ", c.cilindrada)
+      c.puertas, "\nvelocidad = ", c.velocidad, " km/h\ncilindrada = ", c.cilindrada, "cc")
