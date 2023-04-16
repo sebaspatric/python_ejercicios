@@ -22,7 +22,7 @@ for i in range(1600, 2100+1):
 
 
 print("\n\n-----aquí la función----------------------")
-anho = int(input("Ingrese el año: "))
+anho = int(input("Ingrese el año(numero entero): "))
 
 def bisiesto(anho):
     if isBisiesto(anho):
