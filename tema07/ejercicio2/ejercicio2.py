@@ -13,7 +13,7 @@ hora = time.localtime()
 print(hora)
 #print(hora.tm_hour)
 horaSalida = 7
-if hora.tm_hour == horaSalida:
+if hora.tm_hour >= horaSalida:
     print("Es hora de ir a casa")
 else:
     texto1 = ("No es hora de ir a casa. La hora de salida es {} hrs\nson las {}:{}".format(horaSalida, hora.tm_hour, hora.tm_min))
@@ -25,7 +25,7 @@ else:
     #print(hora.tm_min)
 print("-------------------")
 horaSalida = 19
-if hora.tm_hour == horaSalida :
+if hora.tm_hour >= horaSalida :
     print("Es hora de ir a casa")
 else:
     texto1 = ("No es hora de ir a casa. La hora de salida es {} hrs\nson las {}:{}".format(horaSalida, hora.tm_hour, hora.tm_min))
