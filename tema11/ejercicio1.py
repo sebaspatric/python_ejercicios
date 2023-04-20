@@ -7,6 +7,8 @@ import sqlite3
 
 def main():
     num = int(input("Ingrese el número de alumnos que desea crear: "))
+    while num < 8:
+        num = int(input("Ingrese el número de alumnos que desea crear(> o = a 8): "))
     insersiones(num)
     nombre = input("Ingrese nombre a buscar: ")
     buscar_alumno(nombre)
